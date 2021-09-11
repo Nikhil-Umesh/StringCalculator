@@ -40,6 +40,6 @@ public class StringCalculatorTest {
     public void numbersNewlineDelimitedShouldBeSummed() {
         assertEquals(calculator.add("1\n2"), 3);
         assertEquals(calculator.add("11\n13"), 24);
-        assertEquals(calculator.add("1,2\3"), 6);
+        assertEquals(calculator.add("1,2\n3"), 6);
     }
 }
