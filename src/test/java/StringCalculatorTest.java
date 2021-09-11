@@ -28,4 +28,11 @@ public class StringCalculatorTest {
         assertEquals(calculator.add("71,33"), 104);
         assertEquals(calculator.add("103,104"),207);
     }
+
+    @Test
+    public void testForUnknownNumberOfInputs() {
+        assertEquals(calculator.add("1,2"), 3);
+        assertEquals(calculator.add("71,33,1,103"), 208);
+        assertEquals(calculator.add("103,104,11,12,5,7,1,12,99"),354);
+    }
 }
