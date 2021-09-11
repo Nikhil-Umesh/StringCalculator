@@ -42,4 +42,9 @@ public class StringCalculatorTest {
         assertEquals(calculator.add("11\n13"), 24);
         assertEquals(calculator.add("1,2\n3"), 6);
     }
+
+    @Test
+    public void differentDelimiter() {
+        assertEquals(calculator.add("1;2"), 3);
+    }
 }
