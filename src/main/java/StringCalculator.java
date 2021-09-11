@@ -13,13 +13,21 @@ public class StringCalculator {
     private int getSum(String[] numbers) {
         int sum = 0;
         for (String currentNumber:numbers) {
+            if (stringToInt(currentNumber) > 1000) {
+                continue;
+            }
             sum += stringToInt(currentNumber);
         }
         return sum;
     }
 
     private int stringToInt(String number) {
-        return Integer.parseInt(number);
+        int num = Integer.parseInt(number);
+        if (num < 0) {
+            throw new IllegalArgumentException("Negative input! the number is"+num);
+        } else {
+            return num;
+        }
     }
 
 }
