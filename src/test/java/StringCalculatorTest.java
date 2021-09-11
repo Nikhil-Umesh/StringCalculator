@@ -26,5 +26,6 @@ public class StringCalculatorTest {
     public void testFor2Numbers() {
         assertEquals(calculator.add("1,2"), 3);
         assertEquals(calculator.add("71,33"), 104);
+        assertEquals(calculator.add("103,104"),207);
     }
 }
