@@ -35,4 +35,11 @@ public class StringCalculatorTest {
         assertEquals(calculator.add("71,33,1,103"), 208);
         assertEquals(calculator.add("103,104,11,12,5,7,1,12,99"),354);
     }
+
+    @Test
+    public void numbersNewlineDelimitedShouldBeSummed() {
+        assertEquals(calculator.add("1\n2"), 3);
+        assertEquals(calculator.add("11\n13"), 24);
+        assertEquals(calculator.add("1,2\3"), 6);
+    }
 }
